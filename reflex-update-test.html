@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head><title>reflex</title></head><style type=text/css>#circle{width:200px;height:200px;background-color:red;border-radius:200px;display:none;float:left;margin-left:30px;padding:10px}#stats{float:right;border:3px solid black;border-radius:10px;padding:10px;position:relative;left:7px}#displaybox{margin:100px 0 100px 500px;border:4px solid #f7cb52;width:300px;height:300px;color:#f7cb52;border-radius:10px}#pause{float:right;position:relative;top:-100px;padding:10px;border-radius:5px;background-color:}</style>
 
-<body><div id=stats><button id=pause>play</button><h2><u>STATS</u></h2><hr/><span id=slowesttime>your slowest time was: 0</span> seconds<hr/><span id=quickesttime>your fastest time was: 0</span> seconds<hr/><span id=lasttime>your last time was: 0</span> seconds<hr/><span id=clickamount>you have made: 0</span> clicks<hr/><span id=averagetime>your average time is: 0</span> seconds<hr/><span id=pointamount>you have: 0</span> points<hr/><span id=timeplaying>your have been playing: 0</span> seconds</div><div id=displaybox><h3> Click the Circle to test your reflexes</h3><hr/><div id=circle> </div></div></body></html><script type=text/javascript>
+<body><div id=stats><button id=pause>play</button><h2><u>STATS</u></h2><hr/><span id=slowesttime>your slowest time was: 0</span><hr/><span id=quickesttime>your fastest time was: 0</span> seconds<hr/><span id=lasttime>your last time was: 0</span> seconds<hr/><span id=clickamount>you have made: 0</span> clicks<hr/><span id=averagetime>your average time is: 0</span> seconds<hr/><span id=pointamount>you have: 0</span> points<hr/><span id=timeplaying>your have been playing: 0</span> seconds</div><div id=displaybox><h3> Click the Circle to test your reflexes</h3><hr/><div id=circle> </div></div></body></html><script type=text/javascript>
 var game=false;var startedtime;
 var clickedtime;
 var createdtime;
@@ -74,9 +74,9 @@ document.getElementById("clickamount").innerHTML="you have made: "+clicks;
 document.getElementById("averagetime").innerHTML="your average time is: "+Math.floor(combinedtime/clicks*10000)/10000;
 document.getElementById("pointamount").innerHTML="you have: "+points;
 if (Math.floor(playingtime/1000) >= 60){
-document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)/60;
+document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)/60+"minutes";
 }else{
-document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000);
+document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)+"seconds";
 }
 };
 document.getElementById("pause").onclick=function(){

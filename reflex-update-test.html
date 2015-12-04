@@ -48,7 +48,8 @@ makeBox();
 };
 makeBox();
 document.getElementById("circle").onclick=function(){
-if(shape==0||shape==1&&reactiontime =< 1){
+reactiontime=(clickedtime-createdtime)/1000;
+if(shape==0||shape==1&&reactiontime <= 1){
 points++;
 }else if(shape==2){
 points--;
@@ -56,7 +57,6 @@ points--;
 if(game==true){
 document.getElementById("circle").style.display="none";
 clickedtime=Date.now();
-reactiontime=(clickedtime-createdtime)/1000;
 combinedtime=combinedtime+reactiontime;
 clicks++;
 makeBox();

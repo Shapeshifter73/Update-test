@@ -74,9 +74,9 @@ document.getElementById("clickamount").innerHTML="you have made: "+clicks;
 document.getElementById("averagetime").innerHTML="your average time is: "+Math.floor(combinedtime/clicks*10000)/10000;
 document.getElementById("pointamount").innerHTML="you have: "+points;
 if (Math.floor(playingtime/1000) >= 60){
-document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)/60+"minutes";
+document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(Math.floor(playingtime/1000)/6)*10+" minutes";
 }else{
-document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)+"seconds";
+document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)+" seconds";
 }
 };
 document.getElementById("pause").onclick=function(){

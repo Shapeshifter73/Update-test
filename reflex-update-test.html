@@ -70,10 +70,14 @@ playingtime=currenttime-startedtime;
 document.getElementById("lasttime").innerHTML="your last time was: "+reactiontime;
 document.getElementById("slowesttime").innerHTML="your slowest time was: "+slowest;
 document.getElementById("quickesttime").innerHTML="your fastest time was: "+quickest;
-document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000);
 document.getElementById("clickamount").innerHTML="you have made: "+clicks;
 document.getElementById("averagetime").innerHTML="your average time is: "+Math.floor(combinedtime/clicks*10000)/10000;
 document.getElementById("pointamount").innerHTML="you have: "+points;
+if (Math.floor(playingtime/1000) >= 60){
+document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000)/60;
+}else{
+document.getElementById("timeplaying").innerHTML="you have been playing for: "+Math.floor(playingtime/1000);
+}
 };
 document.getElementById("pause").onclick=function(){
 if(game==true){
